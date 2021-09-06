@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::get('/', function () {
 
 Route::get('/ajax-form-submit',[UserController::class, 'index'])->name('user.index');
 Route::post('/ajax-form-submit',[UserController::class, 'userRegister'])->name('user.Register');
+
+Route::resource('products',ProductController::class);
