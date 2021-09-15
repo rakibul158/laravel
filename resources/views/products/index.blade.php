@@ -25,6 +25,8 @@
             <th>Name</th>
             <th>Details</th>
             <th width="280px">Action</th>
+            <th>Created At</th>
+
         </tr>
         @foreach ($products as $product)
             <tr>
@@ -45,6 +47,8 @@
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>
+                <td>{{ date('d-m-y', strtotime($product->created_at)) }}</td>
+
             </tr>
         @endforeach
     </table>

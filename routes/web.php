@@ -24,3 +24,7 @@ Route::get('/ajax-form-submit',[UserController::class, 'index'])->name('user.ind
 Route::post('/ajax-form-submit',[UserController::class, 'userRegister'])->name('user.Register');
 
 Route::resource('products',ProductController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
